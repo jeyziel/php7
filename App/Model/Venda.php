@@ -23,6 +23,7 @@ class Venda extends Record
         {
             $this->cliente = new Pessoa($this->id_cliente);
         }
+        return $this->cliente;
     }
 
     public function addItem(Produto $p,$quantidade)
@@ -39,6 +40,7 @@ class Venda extends Record
 
     public function store()
     {
+        parent::store();
        
         if ($this->itens)
         {
@@ -48,7 +50,7 @@ class Venda extends Record
                 $item->store();
 
             }
-            parent::store();
+           
         }
          
     }

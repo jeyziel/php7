@@ -145,7 +145,7 @@ class Datagrid extends Table
 				// verifica se há função para transformar os dados
 				if ($function)
 				{
-					$data = call_user_func($funcion,$data);
+					$data = call_user_func($function,$data);
 				}
 
 				//adiciona os dados na celula

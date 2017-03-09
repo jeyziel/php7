@@ -44,6 +44,7 @@ class ContasAbertas extends Page
         $dtEmissao = new DatagridColumn('dt_emissao','Data Emissão','center',200);
         $dt_vencimento = new DatagridColumn('dt_vencimento','Data Vencimento','center',200);
         $valor = new DatagridColumn('valor','Preco','center',100);
+        $valor->setTransformer(array($this,'formata_money'));
 
         //cria as actions
         $action1 = new DatagridAction(array($this,'pagar'));
@@ -152,6 +153,11 @@ class ContasAbertas extends Page
         {
             new Message('error',$e->getMessage());
         }
+    }
+
+    public function formata_money($valor)
+    {
+        return number_format($valor,'2',',','.');
     }
 
     
