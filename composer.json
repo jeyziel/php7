@@ -1,4 +1,11 @@
 {
+"name": "JGFW/microframework",
+  "Description": "Jeyziel blog mvc",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {"name": "Jeyziel Gama", "email": "jeyzielgato@gmail.com"}
+  ],
 	"autoload":
 	{
 		"psr-4":
@@ -9,3 +16,5 @@
 
 	}
 } 
+
+
